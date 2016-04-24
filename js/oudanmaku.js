@@ -2,11 +2,6 @@ function create(){
     var oudanmaku;
     var max_length = 0;
     var message = document.getElementById('message').value;
-    if (!message) {
-        alert('メッセージを入力してください');
-        document.getElementById('message').focus();
-        return;
-    }
     messages = message.split("\n");
     for (i=0; i<messages.length; i++) {
         if (messages[i].length > max_length) {
@@ -46,3 +41,7 @@ function tweet(){
     document.location = url;
 }
 
+function create2tweet(){
+    create();
+    tweet();
+}
